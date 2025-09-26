@@ -4,7 +4,7 @@
 
   import "$lib/links.scss";
 
-  import { IconLink, IconMail, IconBrandLinkedin, IconDeviceDesktop, IconPhone } from '@tabler/icons-svelte';
+  import { IconLink, IconMail, IconBrandLinkedin, IconDeviceDesktop, IconPhone, IconBrandInstagram, IconBrandTiktok, IconBrandX, IconMusic, IconDeviceMobile } from '@tabler/icons-svelte';
 
   let data;
 
@@ -36,8 +36,18 @@
             <IconPhone/>
           {:else if link.icon == "Computer"}
             <IconDeviceDesktop/>
+          {:else if link.icon == "Mobile Phone"}
+            <IconDeviceMobile/>
+          {:else if link.icon == "Music"}
+            <IconMusic/>
           {:else if link.icon == "LinkedIn"}
             <IconBrandLinkedin/>
+          {:else if link.icon == "Instagram"}
+            <IconBrandInstagram/>
+          {:else if link.icon == "Twitter/X"}
+            <IconBrandX/>
+          {:else if link.icon == "TikTok"}
+            <IconBrandTiktok/>
           {:else}
             <IconLink/>
           {/if}
